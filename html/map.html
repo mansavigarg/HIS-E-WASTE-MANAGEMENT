@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../css/global7.css" />
+    <link rel="stylesheet" href="../css/map.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source Sans Pro:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital,wght@0,400;1,400&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      #map {
+          height: 600px;
+          width: 100%;
+      }
+  </style>
+  </head>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <body>
+    <div class="me-4">
+      <header class="frame">
+        <div class="vector-wrapper">
+          <img
+            class="vector-icon"
+            loading="lazy"
+            alt=""
+            src="../images/maps/Vector.png"
+          />
+        </div>
+        <div class="e-treasure-trove-wrapper">
+          <h3 class="e-treasure-trove">E-Treasure Trove</h3>
+        </div>
+        <div class="navbar-menu-parent">
+          <div class="navbar-menu">
+            <div class="navbar-link" id="navbarLinkContainer">
+              <div class="home"><a href="../html/index.html" style="text-decoration: none;
+              color: #71bc68;"> Home </a></div>
+            </div>
+            <div class="navbar-link1" id="navbarLinkContainer1">
+              <div class="dashboard"><a href="../html/dashborad.html" style="text-decoration: none;
+              color: #71bc68;"> Dashboard </a></div>
+            </div>
+            <div class="navbar-link2" id="navbarLinkContainer2">
+              <div class="about-us"><a href="../html/about.html" style="text-decoration: none;
+              color: #71bc68;"> About us </a></div>
+            </div>
+            <div class="divmainnav-button-wrap-wrapper">
+              <div
+                class="divmainnav-button-wrap"
+                id="divmainnavButtonWrapContainer"
+              >
+                <div class="link">
+                  <div class="order-details"><a href="../html/map.html" style="text-decoration:none;
+                  color: #fff;"> Order Details</a></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="divmainnav-button-wrap1"
+              id="divmainnavButtonWrap"
+            ></div>
+          </div>
+          <button class="link1">
+            <div class="pickup-request">Pickup Request</div>
+          </button>
+        </div>
+      </header>
+      <div class="money-bag-rupee"></div>
+      <section class="me-4-inner">
+        <div class="frame-parent">
+          <div class="frame-wrapper">
+            <div class="frame-group">
+              <div class="frame-container">
+                <div class="strong-types-of-e-waste-parent">
+                  <b class="strong-types">SIZE OF TRASH</b>
+                  <div class="pseudo-wrapper">
+                    <div class="pseudo"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-div">
+                <div class="frame-wrapper1">
+                  <div class="frame-wrapper2">
+                    <div class="ellipse-parent">
+                      <div class="frame-child"></div>
+                      <div class="money-bag-rupee-parent">
+                        <img
+                          class="money-bag-rupee1"
+                          alt=""
+                          src="../images/maps/images.png"
+                        />
+
+                        <!-- <img
+                          class="frame-item"
+                          alt=""
+                          src="./public/rectangle-1395.svg"
+                          id="rectangleIcon"
+                        /> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="frame-wrapper3">
+                  <div class="ellipse-group">
+                    <div class="frame-inner"></div>
+                    <img
+                      class="vector-icon1"
+                      loading="lazy"
+                      alt=""
+                      src="../images/maps/Vector (2).png"
+                    />
+                  </div>
+                </div>
+                <div class="frame-wrapper4">
+                  <div class="ellipse-container">
+                    <div class="ellipse-div"></div>
+                    <img
+                      class="truck-icon"
+                      loading="lazy"
+                      alt=""
+                      src="../images/maps/Truck.png"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-parent1">
+            <div class="nearest-e-waste-prcessing-plan-parent">
+              <h3 class="nearest-e-waste-prcessing">
+                NEAREST E-WASTE PRCESSING PLANT
+              </h3>
+              <div class="frame-wrapper5">
+                <div class="frame-parent2">
+                  <div class="icon-location-parent">
+                    <img
+                      class="icon-location"
+                      loading="lazy"
+                      alt=""
+                      src="../images/maps/🦆 icon _Location_.png"
+                    />
+
+                    <h3 class="eco-layer-e-waste">Eco Layer EWaste Recycling</h3>
+                  </div>
+                  <div class="icon-location-group">
+                    <img
+                      class="icon-location1"
+                      loading="lazy"
+                      alt=""
+                      src="../images/maps/🦆 icon _Location_ grp.png"
+                    />
+
+                    <div class="regreen-rycling-pvt-ltd-parent">
+                      <h3 class="regreen-rycling-pvt">
+                        Regreen Recycling Pvt Ltd
+                      </h3>
+                      <div class="e-frontling-plant-parent">
+                        <h3 class="e-frontling-plant">E-Frontling Plant</h3>
+                        <div class="ecostar-rycling-e-waste-parent">
+                          <h3 class="ecostar-rycling-e-waste">
+                            Ecostar Recycling E-waste
+                          </h3>
+                          <div class="conditional-split">
+                            <h3 class="ecotech-rycling">Ecotech Recycling</h3>
+                          </div>
+                          <div class="input-filter">
+                            <h3 class="e-incharge">E-incharge</h3>
+                            <h3 class="e-clean">E-Clean</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="error-handler">
+              <div id="map"></div>
+
+              <script>
+                  // Initialize the map
+                  var map = L.map('map').setView([26.7685, 75.8331], 16); // Centered at India, zoom level 5
+          
+                  // Add a tile layer (OpenStreetMap)
+                  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  }).addTo(map);
+          
+                  var marker = L.marker([26.7685, 75.8331], { title: "Poornima College" }).addTo(map); // Coordinates for Poornima College of Engineering, Jaipur in RIICO Industrial Area, Sitapura, Jaipur
+                  marker.bindPopup("<b>Poornima College of Engineering, Jaipur</b><br>RIICO Industrial Area, Sitapura, Jaipur, Rajasthan, India, 302022").openPopup(); // Add a popup to the marker
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="parallel-processor">
+        <div class="sequential-processor">
+          <div class="tree-structure">
+            <div class="data-validator">
+              <b class="strong-types1">CHOOSE HOW TO GIVE YOUR TRASH</b>
+              <div class="data-encryptor">
+                <div class="pseudo1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="image-processor">
+            <button class="sound-analyzer" id="soundAnalyzer">
+              <div class="door-step-pick" data-scroll-to="doorStepPick">
+                Door Step Pick up
+              </div>
+            </button>
+            <div class="data-normalizer">
+              <button class="data-transformer">
+                <div class="drop-at-plant">Drop at Plant</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="data-joiner">
+        <div class="data-splitter">
+          <div class="data-sorter">
+            <div class="data-validator1">
+              <b class="strong-types2">YOUR E-WASTE DETAILS</b>
+              <div class="data-encryptor1">
+                <div class="pseudo2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="data-storage">
+            <div class="database-manager">
+              <div class="web-scraper">
+                <b class="name-rahul">Name : Rahul Singh</b>
+                <b class="customer-id">Customer Id : 24672792</b>
+                <b class="phone-number">Phone Number : 908280902</b>
+              </div>
+              <div class="network-router">
+                <div class="firewall">
+                  <b class="pick-up-id-">Pick Up Id- 5237</b>
+                  <div class="cloud-storage">
+                    <b class="pick-up-date">Pick Up Date: 26-09-2023</b>
+                  </div>
+                </div>
+                <div class="u-r-l-shortener">
+                  <b class="pick-up-location"
+                    >Pick Up Location : KL UNIVERSITY</b
+                  >
+                </div>
+                <div class="spam-filter">
+                  <b class="preferd-time">Preferd Time:</b>
+                </div>
+              </div>
+              <div class="image-editor">
+                <div class="sound-editor">
+                  <div class="video-editor">
+                    <b class="earnings">EARNINGS</b>
+                  </div>
+                  <textarea
+                    class="game-engine"
+                    placeholder="Points Earned: 5020"
+                    rows="{13}"
+                    cols="{28}"
+                  >
+                  </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="parallel-database">
+              <div class="sequential-database">
+                <img
+                  class="whatsapp-image-2023-09-26-at-0"
+                  loading="lazy"
+                  alt=""
+                  src="../images/maps/WhatsApp Image 2023-09-26 at 04.54 1.png"
+                />
+
+                <div class="data-aggregator">
+                  <b class="e-waste-processing-plant"
+                    >E-Waste Processing Plant</b
+                  >
+                  <div class="input-filter1">
+                    <b class="name-ecostart">Name: Ecostart</b>
+                  </div>
+                  <div class="input-filter2">
+                    <b class="location-1-town">Location: 1-Town </b>
+                  </div>
+                  <div class="input-filter3">
+                    <b class="type-dismantle">Type: Dismantle</b>
+                  </div>
+                </div>
+              </div>
+              <textarea
+                class="error-tracker"
+                placeholder="Expected Date and time for PIck up:"
+                rows="{13}"
+                cols="{21}"
+              >
+              </textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="columns">
+          <div class="small-columns">
+            <div class="column">
+              <div class="logo-wrapper">
+                <div class="logo">
+                  <img
+                    class="vector-icon2"
+                    loading="lazy"
+                    alt=""
+                    src="../images/maps/Vector whitre (1).png"
+                  />
+                </div>
+                <h3 class="e-treasure-trove1">E-Treasure Trove</h3>
+              </div>
+            </div>
+            <div class="column1">
+              <div class="content">
+                <div class="contact">Contact</div>
+                <div class="footer-links">
+                  <div class="link2">
+                    <div class="careers">Careers</div>
+                  </div>
+                  <div class="link3">
+                    <div class="benefits">Benefits</div>
+                  </div>
+                  <div class="link4">
+                    <div class="notice-board">Notice Board</div>
+                  </div>
+                  <div class="link5">
+                    <div class="explore">Explore</div>
+                  </div>
+                  <div class="link6">
+                    <div class="trails">Trails</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column2">
+              <div class="content1">
+                <div class="company">Company</div>
+                <div class="footer-links1">
+                  <div class="a-link">
+                    <div class="about">About</div>
+                  </div>
+                  <div class="a-link1">
+                    <div class="jobs">Jobs</div>
+                  </div>
+                  <div class="a-link2">
+                    <div class="support">Support</div>
+                  </div>
+                  <div class="a-link3"></div>
+                  <div class="a-link4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column3">
+            <div class="form">
+              <div class="form-wrapper">
+                <div class="form1">
+                  <div class="form-text-input">
+                    <div class="enter-your-email">Enter your email</div>
+                  </div>
+                  <button class="form-button">
+                    <div class="feedback">FEEDBACK</div>
+                  </button>
+                </div>
+              </div>
+              <div class="by-subscribing-you-container">
+                By subscribing you agree to with our
+                <span class="privacy-policy">Privacy Policy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="content2"></div>
+          <div class="social-links">
+            <img
+              class="icon-facebook"
+              loading="lazy"
+              alt=""
+              src="../images/maps/Vector-2 (1).png"
+            />
+
+            <img
+              class="icon-instagram"
+              loading="lazy"
+              alt=""
+              src="../images/maps/Vector-1 (1).png"
+            />
+
+            <img
+              class="icon-twitter"
+              loading="lazy"
+              alt=""
+              src="../images/maps/X logo (1).png"
+            />
+
+            <img
+              class="icon-linkedin"
+              loading="lazy"
+              alt=""
+              src="../images/maps/Vector (3).png"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+<!-- 
+    <script>
+      var navbarLinkContainer = document.getElementById("navbarLinkContainer");
+      if (navbarLinkContainer) {
+        navbarLinkContainer.addEventListener("click", function (e) {
+          window.location.href = "./log-in-page.html";
+        });
+      }
+      
+      var navbarLinkContainer1 = document.getElementById("navbarLinkContainer1");
+      if (navbarLinkContainer1) {
+        navbarLinkContainer1.addEventListener("click", function (e) {
+          window.location.href = "./main-home-page.html";
+        });
+      }
+      
+      var navbarLinkContainer2 = document.getElementById("navbarLinkContainer2");
+      if (navbarLinkContainer2) {
+        navbarLinkContainer2.addEventListener("click", function (e) {
+          window.location.href = "./data-hub1.html";
+        });
+      }
+      
+      var divmainnavButtonWrapContainer = document.getElementById(
+        "divmainnavButtonWrapContainer"
+      );
+      if (divmainnavButtonWrapContainer) {
+        divmainnavButtonWrapContainer.addEventListener("click", function (e) {
+          // Please sync "Wireframe - 5" to the project
+        });
+      }
+      
+      var divmainnavButtonWrap = document.getElementById("divmainnavButtonWrap");
+      if (divmainnavButtonWrap) {
+        divmainnavButtonWrap.addEventListener("click", function (e) {
+          window.location.href = "./data-hub.html";
+        });
+      }
+      
+      var rectangleIcon = document.getElementById("rectangleIcon");
+      if (rectangleIcon) {
+        rectangleIcon.addEventListener("click", function () {
+          var anchor = document.querySelector("[data-scroll-to='doorStepPick']");
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var soundAnalyzer = document.getElementById("soundAnalyzer");
+      if (soundAnalyzer) {
+        soundAnalyzer.addEventListener("click", function (e) {
+          window.location.href = "./data-hub.html";
+        });
+      }
+      </script> -->
+  </body>
+</html>

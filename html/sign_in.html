@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../css/global2.css" />
+    <link rel="stylesheet" href="../css/sign_in.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sign-in-form">
+      <div class="sign-in-form-child"></div>
+      <header class="navbar-logo-left">
+        <div class="navbar-content">
+          <div class="navbar-content-inner">
+            <div class="treasure-chest-symbol-parent">
+              <img
+                class="treasure-chest-symbol"
+                loading="lazy"
+                alt=""
+                src="../images/E-Treasure Trove LOGO.png"
+              />
+
+              <!-- <h3 class="e-treasure-trove">E-Treasure Trove</h3> -->
+            </div>
+          </div>
+          <div class="language-selector-parent">
+            <div class="language-selector">
+              <div class="home"> <a href="../html/index.html" style="text-decoration: none; color: #71bc68">Home</a></div>
+            </div>
+            <div class="language-selector1">
+              <div class="locate"><a href="../html/map.html" style="text-decoration: none;
+              color: #71bc68;"> Locate</a></div>
+            </div>
+            <div class="language-selector2">
+              <div class="blog">Blog</div>
+            </div>
+            <div class="language-selector3">
+              <div class="about-us"><a href="../html/about.html" style="text-decoration: none;
+              color: #71bc68;"> About us</a></div>
+            </div>
+            <button class="button" id="button">
+              <div class="sign-in"> <a href="../html/sign_in.html" style="text-decoration: none; color: #71bc68"> SIGN IN </a></div>
+            </button>
+            <button class="button1">
+              <div class="register"> <a href="../html/sign_up.html" style="text-decoration: none; color: #ffffff">  REGISTER </a></div>
+            </button>
+          </div>
+        </div>
+        <div class="united-wrapper">
+          <img
+            class="united-icon"
+            loading="lazy"
+            alt=""
+            src="../images/INDIAN_FLAG.png"
+          />
+        </div>
+        <div class="password-input">
+          <div class="eng-us">India(IND)</div>
+        </div>
+        <div class="chevron-down-wrapper">
+          <img
+            class="chevron-down-icon"
+            loading="lazy"
+            alt=""
+            src="../images/chevron-down.svg"
+          />
+        </div>
+      </header>
+      <div class="logo"></div>
+      <section class="sign-in-form-inner">
+        <div class="rectangle-parent">
+          <div class="frame-child"></div>
+          <h1 class="glad-to-see">Glad to see you. Welcome!</h1>
+          <form class="sign-in-message-parent">
+            <div class="sign-in-message">
+              <div class="rectangle-group">
+                <div class="frame-item"></div>
+                <input
+                  class="email-address"
+                  placeholder="Email Address"
+                  type="email"
+                />
+              </div>
+              <div class="rectangle-container">
+                <div class="frame-inner"></div>
+                <input class="password" placeholder="Password" type="password" />
+              </div>
+            </div>
+            <div class="locate-button">
+              <div class="blog-button">
+                <button class="about-us-button">
+                  <div class="register-button" id="registerButton"></div>
+                  <b class="sign-in1"> Sign In </b>
+                </button>
+                <div class="dont-have-an-account-message">
+                  <div class="dont-have-an-container">
+                    Dont Have An Account?
+                    <span class="sign-up"><a href="../html/sign_up.html"> Sign Up </a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "sign-in-form.html";
+        });
+      }
+      
+      var registerButton = document.getElementById("registerButton");
+      if (registerButton) {
+        registerButton.addEventListener("click", function (e) {
+          // Please sync "Wireframe - 2" to the project
+        });
+        }
