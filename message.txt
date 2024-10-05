@@ -1,4 +1,0 @@
-index
-sign_in
-sign_up
-book
